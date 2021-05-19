@@ -1,0 +1,27 @@
+html{
+    background-image: url("images/back.jpeg");
+    color: white;
+    /*height: 100%;*/
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body{
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    background-color: hsla(245, 100%, 19%, 0.8);
+    height: 100%;
+}
+
+img{
+    width: 50%;
+    height: auto;
+    margin-bottom: 30px;
+    background-color: white;
+    margin-left: 25%;
+    margin-right: 25%;
+}
