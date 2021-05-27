@@ -2,10 +2,11 @@
 <html>
 <head>
     <title>My Blog</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
-</head>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3ZYFMGW457"></script>
 <script>
@@ -16,6 +17,7 @@
     gtag('config', 'G-3ZYFMGW457');
 </script><!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3ZYFMGW457"></script>
+
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -23,17 +25,48 @@
 
     gtag('config', 'G-3ZYFMGW457');
 </script>
+<script>
+    function hidden_text(name){
+        var main = document.getElementById('main');
+        var about = document.getElementById('about');
+        var behaviour = document.getElementById('behaviour');
+        var process = document.getElementById('process');
 
+        main.style.display = "none";
+        about.style.display = "none";
+        behaviour.style.display = "none";
+        process.style.display = "none";
+
+        var current = document.getElementById(name);
+        current.style.display = "block"
+    }
+</script>
 <body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" onclick="hidden_text('main')" href="#">Data discovery</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" onclick="hidden_text('about')" href="#">About</a>
+            <a class="nav-item nav-link" onclick="hidden_text('behaviour')" href="#">Behaviour</a>
+            <a class="nav-item nav-link" onclick="hidden_text('process')" href="#">Process</a>
+        </div>
+    </div>
+</nav>
+<div class="body">
 <div class="information">
-    <h1>Аналіз відкритих баз даних</h1>
+    <div id="main">
+    <h1>Data Discovery</h1>
     <div class="post">
         <p style="text-align: center;"> Світ бізнесу кипить роботою з даними. На перший погляд, здається, все це
             дуже просто, проте аналіз означає щось більше, ніж просто "пошук інформації". Так що ж таке
             аналіз даних? І як це вписується в сучасний ландшафт мобільних, аналітичних і великих даних?
         </p>
     </div>
-    <div class="post">
+    </div>
+    <div class="post" id="about" style="display: none ">
         <h2>Що ж таке "Дослідження даних" або "Data Discovery" </h2>
         <p class="first">Дослідження даних, яке іноді називають інтелектуальним аналізом даних, включає в
             себе збір та аналіз інформації, а потім представлення результатів у комфортних для читання форматах. В
@@ -52,7 +85,7 @@
             величезний обсяг інформації виключає використання традиційних баз даних та організаційних інструментів для
             вилучення чого-небудь корисного. </p>
     </div>
-    <div class="post">
+    <div class="post" id="behaviour" style="display: none ">
         <hr>
         <h2>Що ж робити з великими даними? </h2>
         <p class="first">Взагалі кажучи, термін «великі дані» або «Big Data» визначається як обсяг,
@@ -73,7 +106,7 @@
         <p>Таким чином, платформи дослідження даних дозволяють організаціям простіше виявляти,
             аналізувати і витягувати відповідні дані.</p>
     </div>
-    <div class="post">
+    <div class="post" id="process" style="display: none ">
         <hr>
         <h2>Як взагалі дослідження даних працює? </h2>
         <p class="first"> Платформи для дослідження даних, як правило, складаються з декількох інструментів,
@@ -96,7 +129,7 @@
         <p>Після аналізу даних можна використовувати інші інструменти дослідження даних для
             представлення виявлених зв'язків, тенденцій або закономірностей у зручному форматі.. </p>
     </div>
-    <div class="post">
+    <span class="images">
         <hr>
         <h2>Інструменти для аналізу даних</h2>
         <img src="power.png">
@@ -104,8 +137,8 @@
         <img src="Qlik.png">
         <img src="Elasticsearch_logo.png">
         
-    </div>
-    <div class="post">
+    </span>
+    <div class="images">
         <hr>
         <h2>Найкращі мови програмування для аналізу даних</h2>
         <img src="python.jpg">
@@ -113,6 +146,7 @@
         <img src="R.png">
         <img src="cpp.png">
     </div>
+</div>
 </div>
 </body>
 </html>
