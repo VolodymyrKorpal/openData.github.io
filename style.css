@@ -51,3 +51,7 @@ img{
 p{
     font-size: 20px;
 }
+
+.bottom{
+    align-self: flex-end;
+}
