@@ -52,6 +52,14 @@ p{
     font-size: 20px;
 }
 
+#main{
+    max-height: calc(100vh - 56px);
+    padding-top: 20%;
+}
+
 .bottom{
-    align-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 50vh;
 }
